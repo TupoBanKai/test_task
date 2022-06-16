@@ -14,16 +14,16 @@ Student.where(parent_id: nil).count
 
 # SQL
 # a)
-SELECT parent_id FROM students
-WHERE COUNT(parent_id != NULL)
+SELECT COUNT(*) FROM students
+WHERE parent_id != NULL
 # b)
-SELECT sudents.id, parents.id, parents.name
+SELECT COUNT(*), parents.id, parents.name
 FROM students
 INNER JOIN parents ON sudents.id = parents.id
-WHERE COUNT(parents.name = 'Marina')
+WHERE parents.name = 'Marina'
 # c)
-SELECT parent_id FROM students
-WHERE COUNT(parent_id = NULL)
+SELECT COUNT(*) FROM students
+WHERE parent_id = NULL
 
 # Scope
 # b)

@@ -21,7 +21,6 @@ class TrafficLight
     end
   end
 
-
   def get_action(color)
     traffic_light = { "green" => "walk", "yellow" => "wait", "red" => "stop" }
     if traffic_light.include?(color)

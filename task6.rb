@@ -18,8 +18,8 @@ Student.where("created_at > ?", datetime).count
 # a)
 SELECT COUNT(*) FROM students
 # b)
-SELECT name FROM students
-WHERE COUNT(name = "Ivan")
+SELECT COUNT(*) FROM students
+WHERE name = "Ivan"
 # c)
-SELECT created_at as time FROM students
-WHERE COUNT(SUBSTRING(time, 1, 10) > "2020-09-01")
+SELECT COUNT(*) FROM students
+WHERE SUBSTRING(time, 1, 10) > "2020-09-01"
